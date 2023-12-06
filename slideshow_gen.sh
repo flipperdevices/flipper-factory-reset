@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-export FBT_TOOLCHAIN_PATH=../flipperzero-firmware
-source ../flipperzero-firmware/scripts/toolchain/fbtenv.sh
+export FBT_TOOLCHAIN_PATH=flipperzero-firmware
+source flipperzero-firmware/scripts/toolchain/fbtenv.sh
 
 cd $(dirname "$0")
 
@@ -32,10 +32,10 @@ rm "$OUTF"
 fi
 
 # Render
-python3 renderer.py --font=haxrcorp_4089_cyrillic_altgr.ttf -i frame_02_tpl.png -o ./first_start/frame_02.png "$FLP_NAME" --xy 77,15
+python3 slideshow/renderer.py --font=slideshow/haxrcorp_4089_cyrillic_altgr.ttf -i slideshow/frame_02_tpl.png -o ./slideshow/first_start/frame_02.png "$FLP_NAME" --xy 77,15
 
 # Pack:
-python3 ../flipperzero-firmware/scripts/slideshow.py -i ./first_start -o "$OUTF"
+python3 flipperzero-firmware/scripts/slideshow.py -i ./slideshow/first_start -o "$OUTF"
 
 if [[ ! -e "$OUTF" ]]; then
 exit 222

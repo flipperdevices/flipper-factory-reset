@@ -26,7 +26,7 @@ sleep 3
 python3 scripts/testing/await_flipper.py $FLIPPER_NAME
 
 echo "Generate slideshow"
-./slideshow/slideshow_gen.sh $FLIPPER_NAME
+./slideshow_gen.sh $FLIPPER_NAME
 
 echo "Copy slideshow to int. Don't forget to pull SD card out"
 python3 flipperzero-firmware/scripts/storage.py send ./slideshow/slides /int/.slideshow
