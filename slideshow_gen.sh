@@ -21,7 +21,7 @@ else
     exit 1
 fi
 
-OUTF="slides"
+OUTF="slideshow/slides"
 
 set -xe
 
