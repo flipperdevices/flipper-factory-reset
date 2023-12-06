@@ -26,7 +26,7 @@ OUTF="slides"
 set -xe
 
 # Clean
-echo -n > ./first_start/frame_02.png
+echo -n > ./slideshow/first_start/frame_02.png
 if [[ -e "$OUTF" ]]; then
 rm "$OUTF"
 fi
